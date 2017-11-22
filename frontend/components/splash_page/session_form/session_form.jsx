@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   // componentWillReceiveProps(nextProps) {
@@ -41,6 +42,10 @@ class SessionForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  demoLogin() {
+    this.props.login({username: 'sansa', password: 'password'});
   }
 
   render () {
@@ -77,9 +82,11 @@ class SessionForm extends React.Component {
           </label>
           <br/>
           <input type="submit" value="Log In" />
-
         </div>
       </form>
+      <button onClick={this.demoLogin} >
+        Demo
+      </button>
       </div>
 
     );
