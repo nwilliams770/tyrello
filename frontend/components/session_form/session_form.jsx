@@ -46,8 +46,14 @@ class SessionForm extends React.Component {
     return (
     <div className="login-form-container">
       <form onSubmit={this.handleSubmit} className="login-form-box">
-
-        <br/>
+        <div className="login-copy">
+          <h2>Welcome to Tyrello</h2>
+          <p>
+            Tyrello allows you to prioritize your projects with boards,
+            lists, and cards. Work collaboratively and get more done.
+            And some other cool shit
+          </p>
+        </div>
         {this.renderErrors()}
         <div className="login-form">
           <br/>
@@ -70,10 +76,11 @@ class SessionForm extends React.Component {
           </label>
           <br/>
           <input type="submit" value="Log In" />
-          // Need something here for guest login
+
         </div>
       </form>
       </div>
+
     );
   }
 }

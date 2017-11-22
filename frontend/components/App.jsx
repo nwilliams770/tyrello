@@ -8,6 +8,7 @@ import {
 
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
+import SignupFormContainer from './signup_form/signup_form_container';
 
 
 const App = () => (
@@ -19,7 +20,9 @@ const App = () => (
       <GreetingContainer />
     </header>
 
-    <Route path="/signup" component={SessionFormContainer} />
+    <SessionFormContainer />
+
+    <Route path="/signup" component={SignupFormContainer} />
   </div>
 );
 
