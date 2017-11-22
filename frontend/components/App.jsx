@@ -1,6 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Link } from 'react-router-dom';
+import {
+  Link,
+  Route
+ } from 'react-router-dom';
 
 
 import GreetingContainer from './greeting/greeting_container';
@@ -15,8 +18,8 @@ const App = () => (
       </Link>
       <GreetingContainer />
     </header>
-    
-    <SessionFormContainer />
+
+    <Route path="/signup" component={SessionFormContainer} />
   </div>
 );
 
