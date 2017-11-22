@@ -10,14 +10,22 @@ import {
 import SplashPage from './splash_page/splash_page';
 import SignupFormContainer from './signup_form/signup_form_container';
 
-import { AuthRoute } from '../util/route_util';
+import BoardIndexContainer from './board_index/boards_index_container';
+
+import { AuthRoute, BoardsRoute } from '../util/route_util';
 
 const App = () => (
   <div>
 
     <Switch>
+      // splash-related
       <AuthRoute path="/signup" component={SignupFormContainer} />
-      <Route path="/" component={SplashPage} />
+      <Route path="/boards" component={BoardIndexContainer} />
+      <AuthRoute path="/" component={SplashPage} />
+
+      // boards related
+      // <AuthRoute path="/boards" component={BoardIndexContainer} />
+
     </Switch>
   </div>
 );

@@ -12,11 +12,11 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push("/");
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.loggedIn) {
+  //     this.props.history.push("/");
+  //   }
+  // }
 
   update(field) {
     return e => this.setState({
@@ -26,8 +26,9 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // debugger
     const user = this.state;
-    this.props.login({user});
+    this.props.login(user).then(() => this.props.history.push("/boards"));
   }
 
   renderErrors() {
