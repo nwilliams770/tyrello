@@ -2,27 +2,23 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import {
   Link,
-  Route
+  Route,
+  Switch
  } from 'react-router-dom';
 
 
-import GreetingContainer from './greeting/greeting_container';
-import SessionFormContainer from './session_form/session_form_container';
+import SplashPage from './splash_page/splash_page';
 import SignupFormContainer from './signup_form/signup_form_container';
 
+import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <header>
-      <Link to="/" className="header-link">
-        <h1> Tyrello </h1>
-      </Link>
-      <GreetingContainer />
-    </header>
 
-    <SessionFormContainer />
-
-    <Route path="/signup" component={SignupFormContainer} />
+    <Switch>
+      <AuthRoute path="/signup" component={SignupFormContainer} />
+      <Route path="/" component={SplashPage} />
+    </Switch>
   </div>
 );
 
