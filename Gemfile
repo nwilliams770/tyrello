@@ -41,7 +41,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
-  gem 'jquery-rails'
+  gem 'jquery-rails', '>= 3.0'
 end
 
 group :development do

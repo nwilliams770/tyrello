@@ -26,9 +26,9 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger
     const user = this.state;
-    this.props.login(user).then(() => this.props.history.push("/boards"));
+    this.props.login(user);
+    // .then(() => this.props.history.push("/boards"));
   }
 
   renderErrors() {
