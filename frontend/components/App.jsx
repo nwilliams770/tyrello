@@ -22,7 +22,6 @@ const App = () => (
       <Route path="/boards" component={BoardsIndexContainer} />
       <AuthRoute path="/" component={SplashPage} />
 
-
     </Switch>
   </div>
 );
