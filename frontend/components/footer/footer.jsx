@@ -5,15 +5,15 @@ const Footer = () => {
     <div className="footer-container">
       <div className="footer-contents">
         <a target="_blank" href="https://homestarrunner.com/">
-          <i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
+          <i className="fa fa-github-square fa-3x" aria-hidden="true"></i>
         </a>
 
         <a target="_blank" href="https://homestarrunner.com/">
-          <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+          <i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
         </a>
 
         <a target="_blank" href="https://homestarrunner.com/">
-          <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+          <i className="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
         </a>
       </div>
     </div>
