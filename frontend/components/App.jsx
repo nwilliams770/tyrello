@@ -10,7 +10,7 @@ import {
 import SplashPage from './splash_page/splash_page';
 import SignupFormContainer from './signup_form/signup_form_container';
 
-import BoardIndexContainer from './board_index/boards_index_container';
+import BoardsIndexContainer from './boards_index/boards_index_container';
 
 import { AuthRoute, BoardsRoute } from '../util/route_util';
 
@@ -20,11 +20,11 @@ const App = () => (
     <Switch>
       // splash-related
       <AuthRoute path="/signup" component={SignupFormContainer} />
-      <Route path="/boards" component={BoardIndexContainer} />
+      <Route path="/boards" component={BoardsIndexContainer} />
       <AuthRoute path="/" component={SplashPage} />
 
       // boards related
-      // <AuthRoute path="/boards" component={BoardIndexContainer} />
+      // <AuthRoute path="/boards" component={BoardsIndexContainer} />
 
     </Switch>
   </div>

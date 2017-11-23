@@ -1,0 +1,47 @@
+@import "colors";
+
+.session-bar {
+  display: flex;
+  width: 100%;
+  background: none;
+  height: 80px;
+  justify-content: center;
+}
+
+.session-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  top: 5px;
+}
+
+.signup-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 150px;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color:white;
+  background-color: rgba(0, 0, 0, .7);
+  margin-bottom: 35px;
+}
+
+.signup-btn:hover{
+  transition: all 300ms ease-in-out;
+  background-color: black;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.logo-box {
+  width: 210px;
+  height: 110px;
+  background-repeat: no-repeat;
+  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_200/v1511475475/tyrello_logo_and_type_PNG_tdtcsc.png");
+}

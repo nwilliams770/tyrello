@@ -1,0 +1,56 @@
+.header-logo {
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 90px;
+  display: flex;
+}
+
+.header-logo-box {
+  align-self: center;
+  display: flex;
+  width: 210px;
+  height: 92px;
+  background-repeat: no-repeat;
+  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_200/v1511475475/tyrello_logo_and_type_PNG_tdtcsc.png");
+}
+
+.sign-up-body {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: white
+  // display: flex;
+  // text-align: center;
+  // flex-direction: column;
+  // padding: 20px;
+  // color: white;
+  // margin-bottom: 8px;
+}
+
+.sign-up-header {
+  margin-bottom: 15px;
+  font-size: 45px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.sign-up-copy {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.login-link {
+  color: white;
+  margin-left: 4px;
+}
+
+#sign-up-button {
+  margin-top: 20px;
+}

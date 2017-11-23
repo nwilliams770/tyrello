@@ -39,55 +39,53 @@ class SignupForm extends React.Component {
 
   render () {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <br/>
-          {this.renderErrors()}
-          <div className="signup-form">
-            <div className="signup-copy">
-              Logo
-              <h2>Sign Up!</h2>
-              <p>
-                Already have an account?
-                <Link to="/login">
-                  Log In
-                </Link>
-              </p>
-            </div>
-            <br/>
-            <label>Email:
-              <br/>
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="signup-input"
-              />
-            </label>
-            <br/>
-            <label>Username:
-              <br/>
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="signup-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <br/>
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="signup-input"
-              />
-            </label>
-            <br/>
-            <input type="submit" value="Sign Up" />
+      <div className="bg-box">
+        <div className="login-master-box">
+          <div id="login-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
 
-          </div>
-        </form>
-        <Footer />
+              <div className="sign-up-copy">
+                <div className="header-logo-box">
+                  <div className="header-logo">
+                  </div>
+                </div>
+                <h1 className="sign-up-header">sign up.</h1>
+                <p className="sign-up-body">
+                  Already have an account?
+                  <Link className="login-link" to="/login">
+                    Log In
+                  </Link>
+                </p>
+              </div>
+              {this.renderErrors()}
+              <div className="login-form">
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="login-input signup-email"
+                  placeholder="Email"
+                />
+
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input signup-username"
+                  placeholder="Username"
+                />
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input signup-password"
+                  placeholder="Password"
+                />
+              <input className="session-button" id="sign-up-button" type="submit" value="Sign Up" />
+
+            </div>
+          </form>
         </div>
+      <Footer />
+    </div>
+  </div>
     );
   }
 }

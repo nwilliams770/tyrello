@@ -42,6 +42,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'annotate'
   gem 'jquery-rails', '>= 3.0'
+  gem 'font-awesome-sass', '~> 4.7.0'
 end
 
 group :development do

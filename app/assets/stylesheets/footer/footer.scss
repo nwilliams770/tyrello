@@ -1,0 +1,29 @@
+@import "colors";
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+}
+
+.footer-contents {
+  display: flex;
+}
+
+.footer-contents a {
+  margin: 8px;
+}
+
+
+.fa {
+  color: white;
+}
+
+.fa:hover {
+  color: black;
+  transition: all .25 ease-in-out;
+}

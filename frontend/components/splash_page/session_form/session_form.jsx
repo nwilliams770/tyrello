@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="login-errors">
         {this.props.errors.map((error, i) =>(
           <li key={`error-${i}`}>
             {error}
@@ -44,51 +44,52 @@ class SessionForm extends React.Component {
     );
   }
 
-  demoLogin() {
+  demoLogin(e) {
+    e.preventDefault();
     this.props.login({username: 'sansa', password: 'password'});
   }
 
   render () {
     return (
-    <div className="login-form-container">
-      <form onSubmit={this.handleSubmit} className="login-form-box">
-        <div className="login-copy">
-          <h2>Welcome to Tyrello</h2>
-          <p>
-            Tyrello allows you to prioritize your projects with boards,
-            lists, and cards. Work collaboratively and get more done.
-            And some other cool shit
-          </p>
+    <div className="bg-box">
+      <div className="login-master-box">
+        <div id="login-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            <div className="login-copy">
+              <h1 className="login-header">welcome.</h1>
+              <hr/>
+              <p className="login-body">
+                prioritize your projects with boards,
+                lists, and cards. work collaboratively and get more done.
+              </p>
+            </div>
+            {this.renderErrors()}
+            <div className="login-form">
+              <label className="input-label"></label>
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input login-username"
+                  placeholder="Username"
+                />
+              <label className="input-label"></label>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input login-password"
+                  placeholder="Password"
+                />
+            </div>
+            <div className="session-buttons">
+              <input className="session-button" type="submit" value="LOG IN" />
+              <button className="session-button" onClick={this.demoLogin} >
+                DEMO
+              </button>
+            </div>
+          </form>
+          </div>
         </div>
-        {this.renderErrors()}
-        <div className="login-form">
-          <br/>
-          <label>Username:
-            <br/>
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              className="login-input"
-            />
-          </label>
-          <br/>
-          <label>Password:
-            <br/>
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="login-input"
-            />
-          </label>
-          <br/>
-          <input type="submit" value="Log In" />
-        </div>
-      </form>
-      <button onClick={this.demoLogin} >
-        Demo
-      </button>
       </div>
-
     );
   }
 }
