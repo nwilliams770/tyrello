@@ -18,13 +18,10 @@ const App = () => (
   <div>
 
     <Switch>
-      // splash-related
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/boards" component={BoardsIndexContainer} />
       <AuthRoute path="/" component={SplashPage} />
 
-      // boards related
-      // <AuthRoute path="/boards" component={BoardsIndexContainer} />
 
     </Switch>
   </div>
