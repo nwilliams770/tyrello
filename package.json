@@ -39,5 +39,13 @@
   "bugs": {
     "url": "https://github.com/nwilliams770/tyrello/issues"
   },
-  "homepage": "https://github.com/nwilliams770/tyrello#readme"
+  "homepage": "https://github.com/nwilliams770/tyrello#readme",
+  
+  "engines": {
+    "node": "6.10.1",
+    "npm": "3.10.10"
+  },
+  "scripts": {
+    "postinstall": "webpack"
+  }
 }
