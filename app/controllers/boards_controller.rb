@@ -24,6 +24,7 @@ class BoardsController < ApplicationController
       render :json
     else
       render :json @board.errors.full_messages, status: 422
+    end
   end
 
   def destroy
