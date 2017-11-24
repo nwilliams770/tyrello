@@ -20,7 +20,7 @@ class BoardsController < ApplicationController
 
   def edit
     @board = Board.find(params[:id])
-    if @board.save!
+    if @board.save
       render :json
     else
       render :json, @board.errors.full_messages, status: 422
