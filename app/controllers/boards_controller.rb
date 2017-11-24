@@ -9,6 +9,13 @@ class BoardsController < ApplicationController
   end
 
   def index
+    # p params
+    # debugger -=> params
+    # if params.include?(:user_id)
+      #first find the user from the params
+      #pull their boards
+      #return them
+
     @boards = Board.all
     render :index
   end
