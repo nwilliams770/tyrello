@@ -12,16 +12,14 @@ import SignupFormContainer from './signup_form/signup_form_container';
 
 import BoardsIndexContainer from './boards_index/boards_index_container';
 
-import { AuthRoute, BoardsRoute } from '../util/route_util';
+import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-
     <Switch>
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/boards" component={BoardsIndexContainer} />
       <AuthRoute path="/" component={SplashPage} />
-
     </Switch>
   </div>
 );
