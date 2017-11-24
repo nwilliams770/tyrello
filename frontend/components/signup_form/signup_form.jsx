@@ -21,8 +21,14 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     const user = this.state;
-    this.props.signup(user).then(() => this.props.history.push("/boards"));
+    this.props.signup(user);
+    // .then(() => this.props.history.push("/boards"));
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   renderErrors() {
