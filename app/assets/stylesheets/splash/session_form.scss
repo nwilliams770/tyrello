@@ -89,7 +89,7 @@ hr {
     border: 0;
     border-top: 3px solid #ccc;
     margin: 0.5em 0;
-    margin-bottom: 33px;
+    margin-bottom: 26px;
 }
 
 .login-form {
@@ -122,6 +122,14 @@ hr {
   font-weight: 100;
   font-size: 16px;
   letter-spacing: 1px;
+}
+
+.login-bullets {
+  font-size: 13px;
+}
+
+.bullet-header {
+  margin-bottom: 3px;
 }
 
 .login-input {
@@ -185,6 +193,10 @@ hr {
   color:white;
   background-color: rgba(255, 255, 255, .5);
   margin-bottom: 10px;
+}
+
+.session-button:focus {
+  outline: 0;
 }
 
 .session-button:hover{

@@ -84,7 +84,7 @@ class SignupForm extends React.Component {
                   className="login-input signup-password"
                   placeholder="Password"
                 />
-              <input className="session-button" id="sign-up-button" type="submit" value="Sign Up" />
+              <input className="session-button" id="sign-up-button" type="submit" value="SIGN UP" />
 
             </div>
           </form>
