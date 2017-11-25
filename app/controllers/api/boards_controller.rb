@@ -1,4 +1,4 @@
-class BoardsController < ApplicationController
+class Api::BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
     if @board.save!
@@ -15,8 +15,8 @@ class BoardsController < ApplicationController
       #first find the user from the params
       #pull their boards
       #return them
-
-    @boards = Board.all
+    @boards = current_user.boards
+    @shared_boards = current_user.shared_boards
     render :index
   end
 

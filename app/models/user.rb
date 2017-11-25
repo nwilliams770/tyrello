@@ -21,8 +21,21 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  has_many :boards
-  has_many :shared_boards, through: :board_shares
+  has_many :boards,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Board
+
+  has_many :board_shares,
+    primary_key: :id,
+    foreign_key: :contributer_id,
+    class_name: :BoardShare
+
+  has_many :shared_boards,
+    through: :board_shares,
+    source: :board
+
+
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
