@@ -1,0 +1,22 @@
+.toolbar-container {
+  display: flex;
+  width: 100%;
+  background: red;
+  height: 40px;
+}
+
+.boards-button-container {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-buttons {
+  display: flex;
+  align-items: center;
+}

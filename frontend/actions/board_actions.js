@@ -1,7 +1,7 @@
 import * as APIUtil from '../util/board_api_util';
 
 export const RECEIVE_BOARDS = "RECEIVE_BOARDS";
-export const RECEIVE_BOARD = "RECEIVE_BENCH";
+export const RECEIVE_BOARD = "RECEIVE_BOARD";
 
 export const receiveBoards = boards => ({
   type: RECEIVE_BOARDS,

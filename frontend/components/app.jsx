@@ -9,14 +9,12 @@ import {
 
 import SplashPage from './splash_page/splash_page';
 import SignupFormContainer from './signup_form/signup_form_container';
-
 import BoardsIndexContainer from './boards_index/boards_index_container';
 
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <link href="../../app/assets/logo.ico" rel="shortcut icon" type="image/x-icon" />
     <Switch>
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/boards" component={BoardsIndexContainer} />

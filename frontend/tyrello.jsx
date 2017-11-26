@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.getState = store.getState;
   window.fetchBoards = fetchBoards;
+  // 
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
