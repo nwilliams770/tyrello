@@ -31,6 +31,10 @@ class SignupForm extends React.Component {
     this.props.clearErrors();
   }
 
+  componentDidMount() {
+    document.title = "Tyrello - Sign Up";
+  }
+
   renderErrors() {
     return(
       <ul className="login-errors">

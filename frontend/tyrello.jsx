@@ -5,6 +5,8 @@ import configureStore from './store/store';
 
 import { logout } from './actions/session_actions';
 
+import { fetchBoards } from './actions/board_actions';
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // const store = configureStore();
@@ -23,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // TEST ///
   window.logout = logout;
   window.dispatch = store.dispatch;
+  window.getState = store.getState;
+  window.fetchBoards = fetchBoards;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);

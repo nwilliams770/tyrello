@@ -16,6 +16,7 @@ import { AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
+    <link href="../../app/assets/logo.ico" rel="shortcut icon" type="image/x-icon" />
     <Switch>
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/boards" component={BoardsIndexContainer} />

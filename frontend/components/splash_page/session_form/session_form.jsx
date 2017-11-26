@@ -35,6 +35,10 @@ class SessionForm extends React.Component {
     this.props.clearErrors();
   }
 
+  componentDidMount() {
+    document.title = "Tyrello - Welcome";
+  }
+
   renderErrors() {
     return(
       <ul className="login-errors">
@@ -61,7 +65,7 @@ class SessionForm extends React.Component {
             <div className="login-copy">
               <h1 className="login-header">welcome.</h1>
               <hr/>
-              <ul className="login-body"><div className="bullet-header">Get more done with Tyrello:</div> 
+              <ul className="login-body"><div className="bullet-header">Get more done with Tyrello:</div>
                 <div className="login-bullets">
                 <li>organize projects with lists and cards</li>
                 <li> flexible prioritization</li>
