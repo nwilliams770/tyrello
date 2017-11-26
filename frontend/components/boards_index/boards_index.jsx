@@ -17,14 +17,26 @@ class BoardsIndex extends React.Component {
     const boards = this.props.boards.map((board) => {
       return <li> {board.name}</li>;
       });
+      // <ul>
+      //   { boards }
+      // </ul>
     return (
       <div>
         <ToolBarContainer />
-        <h1>yello</h1>
-        <ul>
-          { boards }
-        </ul>
-        <h1> whaaaa </h1>
+        <div className="personal-boards">
+          <div className="personal-header-container">
+            <i class="personal-icon fa fa-user fa-2x" aria-hidden="true"></i>
+            <h1 className="boards-header">Personal Boards</h1>
+          </div>
+          <div className="boards-list">
+            <ul>
+              <li>Board 1</li>
+              <li>Board 2</li>
+              <li>Board 3</li>
+              <li>Board 4</li>
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }

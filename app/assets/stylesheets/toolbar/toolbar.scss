@@ -1,6 +1,8 @@
+
+
 .toolbar-container {
   display: flex;
-  width: 100%;
+  min-width: 100%;
   background: red;
   height: 40px;
 }
@@ -8,15 +10,118 @@
 .boards-button-container {
   display: flex;
   align-items: center;
-  min-width: 300px;
+  min-width: 280px;
+  margin-left: 10px;
+  width: 33%;
+  justify-content: flex-start;
 }
 
 .logo-container {
   display: flex;
+  height: 40px;
   align-items: center;
+  margin-top: 5px;
+  width: 33%;
+  justify-content: center;
+}
+
+.logo {
+  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/c_scale,h_30/v1511475475/tyrello_logo_and_type_PNG_tdtcsc.png");
+  background-repeat: no-repeat;
+  filter: opacity(70%);
+  height: 35px;
+  width: 75px;
+  display: flex;
+  transition: .1s ease;
+}
+
+.logo:hover {
+  filter: opacity(85%);
+}
+
+.right-buttons-container {
+  display: flex;
+  align-items: center;
+  width: 33%;
+  min-width: 280px;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.boards-button {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border-radius: 3px;
+  border: 0;
+}
+
+.boards-button-copy {
+  line-height: 1px;
+  letter-spacing: 0.5px;
+}
+
+.boards-button:focus {
+  outline: 0;
+}
+
+.boards-btn-logo {
+  margin-right: 12px;
+}
+
+.boards-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.boards-dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.show {
+  display: block;
 }
 
 .right-buttons {
+  border: 0;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: black;
+  text-decoration: none;
+  transition: all .25 ease-in-out;
+}
+
+.icon-links {
+  text-decoration: none;
+}
+
+.right-buttons-icon {
+  color: white;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+.right-buttons:hover {
+  background-color: red;
+}
+
+.toolbar-sess-btn {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0;
 }
