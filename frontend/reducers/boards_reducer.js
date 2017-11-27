@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 import {
   RECEIVE_BOARDS,
   RECEIVE_BOARD
-} from '../actions/session_actions';
+} from '../actions/board_actions';
 
 const boardsReducer = (state = {}, action) => {
   Object.freeze(state);

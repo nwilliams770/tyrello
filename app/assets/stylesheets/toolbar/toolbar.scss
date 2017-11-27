@@ -3,7 +3,7 @@
 .toolbar-container {
   display: flex;
   min-width: 100%;
-  background: red;
+  background: #002841;
   height: 40px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .logo:hover {
-  filter: opacity(85%);
+  filter: opacity(95%);
 }
 
 .right-buttons-container {
@@ -53,12 +53,13 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  background-color: blue;
+  background-color: #025080;
   display: flex;
   align-items: center;
   height: 30px;
   border-radius: 3px;
   border: 0;
+  opacity: 1.0;
 }
 
 .boards-button-copy {
@@ -96,7 +97,7 @@
   width: 30px;
   height: 30px;
   border-radius: 3px;
-  background-color: black;
+  background-color: #025080;
   text-decoration: none;
   transition: all .25 ease-in-out;
 }
