@@ -17,6 +17,17 @@ class Api::BoardsController < ApplicationController
       #return them
     @boards = current_user.boards
     @shared_boards = current_user.shared_boards
+
+    @board_ids = []
+    @boards.each do |board|
+      @board_ids << board.id
+    end
+
+    @shared_board_ids = []
+    @shared_boards.each do |board|
+      @shared_board_ids << board.id
+    end
+
     render :index
   end
 

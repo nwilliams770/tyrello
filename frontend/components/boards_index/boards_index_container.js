@@ -2,10 +2,12 @@ import { connect } from 'react-redux';
 
 import BoardsIndex from './boards_index';
 import { fetchBoards } from '../../actions/board_actions';
-import { selectAllBoards } from '../../reducers/selectors';
+import { selectPersonalBoards, selectSharedBoards } from '../../reducers/selectors';
+import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  boards: selectAllBoards(state)
+  personalBoards: selectPersonalBoards(state),
+  sharedBoards: selectSharedBoards(state)
 });
 
 const mapDispatchToProps = dispatch => ({

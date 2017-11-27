@@ -5,7 +5,15 @@ import {
   RECEIVE_BOARD
 } from '../actions/board_actions';
 
-const boardsReducer = (state = {}, action) => {
+const defaultState = ({
+  byId: {},
+  allIds: {
+    personal: [],
+    shared: []
+  }
+});
+
+const boardsReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_BOARDS:

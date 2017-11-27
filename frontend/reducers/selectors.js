@@ -1,5 +1,11 @@
-import lodash from 'lodash';
+import values from 'lodash/values';
 
-export const selectAllBoards = (state) => {
-  return Object.keys(state.entities.boards).map(id => state.entities.boards[id]);
+export const selectPersonalBoards = (state) => {
+  let personalIds = values(state.entities.boards.allIds.personal);
+  return personalIds.map(id => (state.entities.boards.byId[id]));
+};
+
+export const selectSharedBoards = (state) => {
+  let sharedIds = values(state.entities.boards.allIds.shared);
+  return sharedIds.map(id => (state.entities.boards.byId[id]));
 };

@@ -14,13 +14,14 @@ class BoardsIndex extends React.Component {
   // for shared boards need to figure out how to route them to other users' boards
 
   render() {
-    const boards = this.props.boards.map( (board) => (
+    const personalBoards = this.props.personalBoards.map( (board) => (
       <BoardsIndexItem key={ board.id } board={board} />
     ));
 
-      // <ul>
-      //   { boards }
-      // </ul>
+    const sharedBoards = this.props.sharedBoards.map( (board) => (
+      <BoardsIndexItem key={ board.id } board={board} />
+    ));
+
     return (
       <div className="bg-box2">
         <ToolBarContainer />
@@ -30,30 +31,8 @@ class BoardsIndex extends React.Component {
             <h1 className="boards-header">Personal Boards</h1>
           </div>
           <div className="boards-list-container">
-            <ul>
-              { boards }
-            </ul>
             <ul className="boards-list">
-              <li className="boards-list-item">
-                <button className="boards-list-item-button">
-                  <div className="boards-name">
-                    Board 1
-                  </div>
-                </button>
-              </li>
-              <li className="boards-list-item">
-                <button className="boards-list-item-button">
-                  <div className="boards-name">
-                    Board 2
-                  </div>
-                  </button>
-              </li>
-              <li className="boards-list-item">
-                <button className="boards-list-item-button"> Board 3</button>
-              </li>
-              <li className="boards-list-item">
-                <button className="boards-list-item-button"> Board 4</button>
-              </li>
+                { personalBoards }
               <li className="create-board">
                 <button className="create-board-button">
                   <div className="create-board-copy">
@@ -71,34 +50,7 @@ class BoardsIndex extends React.Component {
           </div>
           <div className="boards-list-container">
             <ul className="boards-list">
-              <li className="boards-list-item">
-                <button className="boards-list-item-button">
-                  <div className="boards-name">
-                    Board 1
-                  </div>
-                </button>
-              </li>
-              <li className="boards-list-item">
-                <button className="boards-list-item-button">
-                  <div className="boards-name">
-                    Board 2
-                  </div>
-                </button>
-              </li>
-              <li className="boards-list-item">
-                <button className="boards-list-item-button">
-                  <div className="boards-name">
-                    Board 3
-                  </div>
-                </button>
-              </li>
-              <li className="boards-list-item">
-                <button className="boards-list-item-button">
-                  <div className="boards-name">
-                    Board 4
-                  </div>
-                </button>
-              </li>
+              { sharedBoards }
             </ul>
           </div>
         </div>
