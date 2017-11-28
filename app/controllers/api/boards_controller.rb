@@ -1,8 +1,11 @@
 class Api::BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
-    if @board.save!
-      render :json
+    @board.author_id = current_user.id
+
+    if @board.save
+      prep_views
+      render :index
     else
       render :json, @board.errors.full_messages, status: 422
     end
@@ -53,6 +56,21 @@ class Api::BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:name, :starred)
+    params.require(:board).permit(:name)
+  end
+
+  def prep_views
+    @boards = current_user.boards
+    @shared_boards = current_user.shared_boards
+
+    @board_ids = []
+    @boards.each do |board|
+      @board_ids << board.id
+    end
+
+    @shared_board_ids = []
+    @shared_boards.each do |board|
+      @shared_board_ids << board.id
+    end
   end
 end

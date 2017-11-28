@@ -2,6 +2,7 @@ import React from 'react';
 
 import BoardsIndexItem from './boards_index_item';
 import ToolBarContainer from '../toolbar/toolbar_container';
+import NewBoardFormContainer from './new_board_form/new_board_form_container';
 import { Link } from 'react-router-dom';
 
 class BoardsIndex extends React.Component {
@@ -25,6 +26,7 @@ class BoardsIndex extends React.Component {
     return (
       <div className="bg-box2">
         <ToolBarContainer />
+        <NewBoardFormContainer />
         <div className="personal-boards">
           <div className="personal-header-container">
             <i className="personal-icon fa fa-user fa-2x" aria-hidden="true"></i>

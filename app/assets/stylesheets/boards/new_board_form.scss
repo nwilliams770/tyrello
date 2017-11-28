@@ -1,0 +1,11 @@
+.show {
+  height: 200px;
+  width: 200px;
+  background: pink;
+  display: absolute;
+}
+
+.hide {
+  height: 0;
+  overflow: hidden;
+}

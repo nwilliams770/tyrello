@@ -16,7 +16,7 @@ export const createBoard = board => (
   $.ajax({
     method: 'POST',
     url: 'api/boards',
-    data: { board }
+    data: {board: {name: board} }
   })
 );
 
