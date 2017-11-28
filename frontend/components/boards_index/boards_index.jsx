@@ -29,8 +29,7 @@ class BoardsIndex extends React.Component {
 
     return (
       <div className="bg-box2">
-        <ToolBarContainer />
-        <div className="personal-boards">
+        <ToolBarContainer className="entire-toolbar"/>
           <div className="personal-header-bg">
             <div className="personal-header-container">
               <i className="personal-icon fa fa-user fa-2x" aria-hidden="true"></i>
@@ -43,7 +42,6 @@ class BoardsIndex extends React.Component {
                 <NewBoardFormContainer />
             </ul>
           </div>
-        </div>
         <div className="shared-boards">
           <div className="shared-header-bg">
             <div className="shared-header-container">

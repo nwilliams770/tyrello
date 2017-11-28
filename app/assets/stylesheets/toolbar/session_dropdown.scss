@@ -1,6 +1,88 @@
 .session-dropdown {
-  width: 200px;
-  height: 200px;
-  background: pink;
+  width: 280px;
+  height: 90px;
+  background: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}
+
+
+.session-dropdown-container {
+  width: 280px;
+  height: 90px;
+  background-color: #016283;
   position: absolute;
+  top: 42px;
+  z-index: 10;
+  right: 5px;
+  border-radius: 4px;
+  display: flex;
+}
+
+.toolbar-sess-btn:focus {
+  outline: none;
+}
+
+.session-exit-button {
+  outline: 0;
+  border: 0;
+  background: 0;
+  color: white;
+  position: relative;
+  right: -173px;
+  top: 3px;
+}
+
+.session-exit-button:hover {
+  transform: scale(1.4);
+  transition: 0.2s ease-in-out;
+}
+
+.session-exit-button:focus {
+  outline: 0;
+}
+
+.current-user-header-copy {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+}
+
+.session-dropdown-underline {
+  width: 240px;
+  display: flex;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid white;
+  margin: 0.5em 0;
+  margin-bottom: 5px
+}
+
+.logout-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 105px;
+  height: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color:white;
+  background-color: rgba(255, 255, 255, .5);
+  margin-bottom: 10px;
+  border: 0;
+}
+
+.logout-button:focus {
+  outline: 0;
+}
+
+.logout-button:hover {
+  transition: all 300ms ease-in-out;
+  background-color: #002841;
+  opacity: 1;
+  cursor: pointer;
 }

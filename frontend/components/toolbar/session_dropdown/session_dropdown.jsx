@@ -38,13 +38,20 @@ class SessionDropdown extends React.Component {
       <div ref={node => {this.node = node;}} >
         <button className="toolbar-sess-btn" onClick={ this.handleClick}>PIC</button>
           {this.state.visible && (
-            <div className='session-dropdown'>
-                <div className="current-user-header">
-                  {this.props.currentUser.username}
-                </div>
-                <hr className="board-form-underline" />
-                <button onClick={ this.props.logout }>Logout</button>
-                <button onClick={ this.handleClick}>&#10005;</button>
+            <div className="session-dropdown-container">
+              <div className='session-dropdown'>
+                  <div className='session-dropdown-header'>
+                    <button className='session-exit-button'
+                      onClick={ this.handleClick}>
+                      &#10005;</button>
+                    <div className="current-user-header-copy">
+                      Welcome, {this.props.currentUser.username}!
+                    </div>
+                  </div>
+                  <hr className="session-dropdown-underline" />
+                  <button className="logout-button"
+                    onClick={ this.props.logout }>Logout</button>
+              </div>
             </div>
           )}
       </div>

@@ -1,3 +1,8 @@
+.entire-toolbar {
+  position: absolute;
+  z-index: 30;
+}
+
 .bg-box2 {
   background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/v1511852310/index_background_lar2sa.jpg");
   height: 100vh;
@@ -8,6 +13,7 @@
   position: absolute;
   bottom:0;
   margin: auto;
+  z-index: -3;
 }
 
 .personal-header-container {
@@ -19,8 +25,7 @@
   justify-content: center;
   height: 40px;
   position: relative;
-  z-index: 0;
-
+  z-index: -1;
   border-radius: 3px;
 }
 
@@ -33,11 +38,9 @@
   height: 40px;
   z-index: -1;
   border-radius: 3px;
+  position: relative;
 }
 
-.personal-header-container::after {
-
-}
 
 .shared-boards {
   margin-top: 50px;

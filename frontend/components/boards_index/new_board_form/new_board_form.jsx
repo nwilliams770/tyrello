@@ -65,7 +65,7 @@ class NewBoardForm extends React.Component {
 
   render() {
     return(
-      <div ref={node => {this.node = node;}} >
+      <div className="board-form-parent" ref={node => {this.node = node;}} >
         <li className="create-board">
           <button onClick={ this.handleClick} className="create-board-button">
             <div className="create-board-copy">

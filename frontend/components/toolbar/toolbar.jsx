@@ -17,15 +17,6 @@ class ToolBar extends React.Component {
           <div className="boards-button-container">
             <div className="boards-dropdown">
               <BoardsDropdown />
-              <button className="boards-button">
-                <img src="http://res.cloudinary.com/nwilliams770/image/upload/c_scale,h_18/v1511726611/logo_gku6sb.png"
-                  className="boards-btn-logo" />
-                <div className="boards-button-copy">
-                  Boards
-                </div>
-              </button>
-              <div id="boards-dropdown-content" className="boards-content">
-              </div>
             </div>
           </div>
           <div className="logo-container">

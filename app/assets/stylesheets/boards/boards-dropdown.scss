@@ -1,0 +1,52 @@
+.boards-dropdown-container {
+  width: 280px;
+  height: 200px;
+  background-color: #016283;
+  position: absolute;
+  top: 42px;
+  z-index: 30;
+  left: 0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.boards-dropdown {
+  position: relative;
+  z-index: 30;
+}
+
+.boards-dropdown-header {
+  margin-left: 10px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: white;
+  z-index: 3;
+  position: relative;
+}
+
+.personal-boards {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.shared-boards {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dropdown-icon {
+  color: white;
+}
+
+.boards-dropdown-item {
+  width: 280px;
+}
+
+.boards-dropdown-item:hover {
+  background-color: #002841;
+  transition: all 0.3s ease-in-out;
+}

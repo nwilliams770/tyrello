@@ -56,22 +56,24 @@ class BoardsDropdown extends React.Component {
           </div>
         </button>
         {this.state.visible && (
-          <div className='boards-dropdown'>
+          <div className="boards-dropdown-container">
+            <div className="boards-dropdown">
               <div className="personal-boards">
-                <h1> Personal Baords</h1>
-                <ul>
-
-                </ul>
+                <i className="dropdown-icon fa fa-user fa" aria-hidden="true"></i>
+                <h1 className="boards-dropdown-header">Personal Boards</h1>
               </div>
+                <ul>
+                  <li className="boards-dropdown-item">testing</li>
+                </ul>
+
               <div className="shared-boards">
-                <h1> Shared Baords</h1>
+                <i className="dropdown-icon fa fa-users fa" aria-hidden="true"></i>
+                <h1 className="boards-dropdown-header">Shared Boards</h1>
                 <ul>
 
                 </ul>
               </div>
-
-              <hr className="board-form-underline" />
-              <button onClick={ this.handleClick}>&#10005;</button>
+            </div>
           </div>
         )}
       </div>

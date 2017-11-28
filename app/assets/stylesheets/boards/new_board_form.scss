@@ -1,3 +1,7 @@
+.board-form-parent {
+  max-height: 200px;
+}
+
 .board-form-container {
   height: 200px;
   width: 300px;
@@ -72,6 +76,7 @@
   outline: 0;
   border: 0;
   background: 0;
+  color: white;
   position: relative;
   right: -80px;
   top: -2px;
@@ -141,6 +146,7 @@
   background-color: rgba(255, 255, 255, .5);
   margin-bottom: 10px;
   border: 0;
+  border-radius: 3px;
 }
 
 .new-board-submit:focus {
