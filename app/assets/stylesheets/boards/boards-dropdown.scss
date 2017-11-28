@@ -50,3 +50,12 @@
   background-color: #002841;
   transition: all 0.3s ease-in-out;
 }
+
+.boards-button:hover {
+  background-color: #003a5e;
+  transition: all .3s ease-in-out;
+}
+
+.boards-button:focus {
+  outline: 0;
+}
