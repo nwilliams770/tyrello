@@ -9,11 +9,6 @@ import { fetchBoards } from './actions/board_actions';
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // const store = configureStore();
-  // logic here for redirecting to board index?
-
-
-
   let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };

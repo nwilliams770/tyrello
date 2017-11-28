@@ -4,9 +4,10 @@ class Api::ListsController < ApplicationController
     @list = List.new(list_params)
     @list.board_id = @list.board.id
 
+
     if @list.save
-      render :json
       @board = list.board
+      @list_ids = @board.lists.map {|list| list.id}
       # you need an @board variable for the show page to render
       render 'api/boards/show'
     else
@@ -16,8 +17,10 @@ class Api::ListsController < ApplicationController
 
   def edit
     @list = List.find(params[:id])
-    if @list.save!
-      render :json
+    if @list.save
+      @board = @list.board
+      @list_ids = @board.lists.map {|list| list.id}
+      render 'api/boards/show'
     else
       render :json, @list.errors.full_messages, status: 422
     end
