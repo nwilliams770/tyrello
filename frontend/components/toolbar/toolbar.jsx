@@ -19,10 +19,12 @@ class ToolBar extends React.Component {
               <BoardsDropdown />
             </div>
           </div>
-          <div className="logo-container">
-            <div className="logo">
+          <Link className="logo-container" to="/boards">
+
+              <div className="logo">
+      
             </div>
-          </div>
+          </Link>
           <div className="right-buttons-container">
             <a className="icon-links" target="_blank" href="https://www.linkedin.com/in/nwilliams770/">
               <button className="right-buttons"><i className="right-buttons-icon fa fa-plus fa-2x" aria-hidden="true"></i></button>

@@ -49,7 +49,7 @@ class BoardsIndex extends React.Component {
               <h1 className="boards-header">Shared Boards</h1>
             </div>
           </div>
-          <div className="boards-list-container">
+          <div className="shared-boards-list-container">
             <ul className="boards-list">
               { sharedBoards }
             </ul>
