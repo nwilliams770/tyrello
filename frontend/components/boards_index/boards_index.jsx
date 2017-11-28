@@ -26,7 +26,6 @@ class BoardsIndex extends React.Component {
     return (
       <div className="bg-box2">
         <ToolBarContainer />
-        <NewBoardFormContainer />
         <div className="personal-boards">
           <div className="personal-header-container">
             <i className="personal-icon fa fa-user fa-2x" aria-hidden="true"></i>
@@ -35,13 +34,7 @@ class BoardsIndex extends React.Component {
           <div className="boards-list-container">
             <ul className="boards-list">
                 { personalBoards }
-              <li className="create-board">
-                <button className="create-board-button">
-                  <div className="create-board-copy">
-                    Create a new board...
-                  </div>
-                </button>
-              </li>
+              <NewBoardFormContainer />
             </ul>
           </div>
         </div>

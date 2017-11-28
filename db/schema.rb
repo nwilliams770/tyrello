@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20171124212841) do
 
   create_table "board_shares", force: :cascade do |t|
     t.integer "board_id", null: false
-    t.integer "contributer_id", null: false
+    t.integer "contributor_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_board_shares_on_board_id"
-    t.index ["contributer_id"], name: "index_board_shares_on_contributer_id"
+    t.index ["contributor_id"], name: "index_board_shares_on_contributor_id"
   end
 
   create_table "boards", force: :cascade do |t|

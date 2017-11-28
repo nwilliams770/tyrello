@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SessionDropdown from "./session_dropdown";
+import SessionDropdown from "./session_dropdown/session_dropdown_container";
 
 
 class ToolBar extends React.Component {
@@ -15,6 +15,7 @@ class ToolBar extends React.Component {
   render () {
     return (
         <div className="toolbar-container">
+          <SessionDropdown />
           <div className="boards-button-container">
             <div className="boards-dropdown">
               <button className="boards-button">

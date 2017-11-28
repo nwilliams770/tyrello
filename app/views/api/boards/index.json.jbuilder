@@ -4,6 +4,12 @@ json.byId do
       json.extract! board, :id, :name, :starred
     end
   end
+
+  @shared_boards.each do |board|
+    json.set! board.id do
+      json.extract! board, :id, :name, :starred
+    end
+  end
 end
 
 

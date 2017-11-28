@@ -8,13 +8,16 @@ class NewBoardForm extends React.Component {
     super(props);
     this.state = {
       name: "",
-      show: false
+      visible: false
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.toggleDropdown = this.toggleDropdown.bind(this);
+    // this.toggleDropdown = this.toggleDropdown.bind(this);
     // this.renderErrors = this.renderErrors.bind(this);
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
 
@@ -32,14 +35,33 @@ class NewBoardForm extends React.Component {
       });
   }
 
-  toggleDropdown (e) {
-    e.preventDefault();
-    if (this.state.show) {
-      this.setState({ show: false});
+  handleClick() {
+    if (!this.state.visible) {
+      document.addEventListener('click', this.handleOutsideClick, false);
     } else {
-      this.setState({ show: true});
+      document.removeEventListener('click', this.handleOutsideClick, false);
     }
+
+    this.setState(prevState => ({
+      visible: !prevState.visible,
+    }));
   }
+
+  handleOutsideClick(e) {
+    if (this.node.contains(e.target)) {
+      return;
+    }
+
+    this.handleClick();
+  }
+  // toggleDropdown (e) {
+  //   e.preventDefault();
+  //   if (this.state.show) {
+  //     this.setState({ show: false});
+  //   } else {
+  //     this.setState({ show: true});
+  //   }
+  // }
 
   renderErrors() {
     return (
@@ -52,29 +74,27 @@ class NewBoardForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div ref={node => {this.node = node;}} >
         <li className="create-board">
-          <button onClick={ this.toggleDropdown} className="create-board-button">
+          <button onClick={ this.handleClick} className="create-board-button">
             <div className="create-board-copy">
               Create a new board...
             </div>
           </button>
         </li>
-        <div
-          id="new-board-form"
-          onBlur={ this.toggleDropdown }
-          className={ this.state.show ? 'show' : 'hide'}
-          tabIndex='O'>
-          <form>
-            <button onClick={ this.toggleDropdown}>&#10005;</button>
-            <label> Name:
-              <input onChange={ this.handleChange('name')}
-                placeholder="Name"
-                value = { this.state.name } />
-            </label>
-            <button onClick={ this.handleSubmit }>Create</button>
-          </form>
-        </div>
+        {this.state.visible && (
+          <div className='show'>
+            <form>
+              <button onClick={ this.handleClick}>&#10005;</button>
+              <label> Name:
+                <input onChange={ this.handleChange('name')}
+                  placeholder="Name"
+                  value = { this.state.name } />
+              </label>
+              <button onClick={ this.handleSubmit }>Create</button>
+            </form>
+          </div>
+        )}
       </div>
     );
   }

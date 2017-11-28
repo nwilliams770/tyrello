@@ -28,7 +28,7 @@ class User < ApplicationRecord
 
   has_many :board_shares,
     primary_key: :id,
-    foreign_key: :contributer_id,
+    foreign_key: :contributor_id,
     class_name: :BoardShare
 
   has_many :shared_boards,
