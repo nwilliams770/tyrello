@@ -16,13 +16,15 @@ class ToolBar extends React.Component {
         <div className="toolbar-container">
           <div className="boards-button-container">
             <div className="boards-dropdown">
-              <BoardsDropdown />
+              <BoardsDropdown
+                personalBoards= { this.props.personalBoards }
+                sharedBoards= {this.props.sharedBoards }/>
             </div>
           </div>
           <Link className="logo-container" to="/boards">
 
               <div className="logo">
-      
+
             </div>
           </Link>
           <div className="right-buttons-container">

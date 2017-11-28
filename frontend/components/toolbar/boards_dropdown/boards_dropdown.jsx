@@ -45,6 +45,8 @@ class BoardsDropdown extends React.Component {
     // const sharedBoards = this.props.sharedBoards.map( (board) => (
     //   <li key={ board.id }> {board.name} </li>
     // ));
+    const personalBoards = this.props.personalBoards;
+    const sharedBoards = this.props.sharedBoards;
 
     return (
       <div ref={node => {this.node = node;}} >
@@ -57,22 +59,22 @@ class BoardsDropdown extends React.Component {
         </button>
         {this.state.visible && (
           <div className="boards-dropdown-container">
-            <div className="boards-dropdown">
+            <div className="boards-dropdown-main">
               <div className="personal-boards-dropdown">
                 <i className="dropdown-icon fa fa-user fa" aria-hidden="true"></i>
                 <h1 className="boards-dropdown-header">Personal Boards</h1>
               </div>
-                <ul>
-                  <li className="boards-dropdown-item">testing</li>
-                </ul>
+              <ul className="boards-dropdown-list">
+                { personalBoards }
+              </ul>
 
               <div className="shared-boards-dropdown">
                 <i className="dropdown-icon fa fa-users fa" aria-hidden="true"></i>
                 <h1 className="boards-dropdown-header">Shared Boards</h1>
-                <ul>
-
-                </ul>
               </div>
+              <ul className="boards-dropdown-list">
+                { sharedBoards }
+              </ul>
             </div>
           </div>
         )}
