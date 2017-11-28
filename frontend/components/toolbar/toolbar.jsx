@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SessionDropdown from "./session_dropdown/session_dropdown_container";
+import SessionDropdown from './session_dropdown/session_dropdown_container';
+import BoardsDropdown from './boards_dropdown/boards_dropdown';
 
 
 class ToolBar extends React.Component {
+
   constructor(props) {
     super(props);
   }
 
-  showSessionDropdown() {
-    this.refs.showSession();
-  }
-
   render () {
     return (
+      <div className="toolbar-background">
         <div className="toolbar-container">
           <div className="boards-button-container">
             <div className="boards-dropdown">
+              <BoardsDropdown />
               <button className="boards-button">
                 <img src="http://res.cloudinary.com/nwilliams770/image/upload/c_scale,h_18/v1511726611/logo_gku6sb.png"
                   className="boards-btn-logo" />
@@ -46,6 +46,7 @@ class ToolBar extends React.Component {
             <SessionDropdown />
           </div>
         </div>
+      </div>
     );
   }
 }

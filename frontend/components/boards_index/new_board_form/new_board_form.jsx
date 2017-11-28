@@ -75,18 +75,21 @@ class NewBoardForm extends React.Component {
         </li>
         {this.state.visible && (
           <div className='board-form-container'>
-            <form>
-              <button onClick={ this.handleClick}>&#10005;</button>
-              <div className="board-form-header">
+            <div className="board-form-header">
+              <div className="board-form-header-copy">
                 Create Board
               </div>
-              <hr className="board-form-underline" />
-              <label> Name:
-                <input onChange={ this.handleChange('name')}
+              <button className="form-exit-button" onClick={ this.handleClick}>&#10005;</button>
+            </div>
+            <hr className="board-form-underline" />
+            <form>
+              <label>
+                <input className="new-board-input"
+                  onChange={ this.handleChange('name')}
                   placeholder="Name"
                   value = { this.state.name } />
               </label>
-              <button onClick={ this.handleSubmit }>Create</button>
+              <button className="new-board-submit" onClick={ this.handleSubmit }>Create</button>
             </form>
           </div>
         )}

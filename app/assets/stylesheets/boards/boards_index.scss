@@ -1,5 +1,5 @@
 .bg-box2 {
-  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/v1511743856/68426522-glacier-wallpapers_f7fwdf.jpg");
+  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/v1511852310/index_background_lar2sa.jpg");
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -14,15 +14,24 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 80px;
   margin-top: 40px;
   width: 200px;
   justify-content: center;
   height: 40px;
   position: relative;
   z-index: 0;
+
+  border-radius: 3px;
+}
+
+.personal-header-bg {
   background-color: #002841;
   opacity: 0.8;
+  margin-left: 80px;
+  margin-top: 40px;
+  width: 200px;
+  height: 40px;
+  z-index: -1;
   border-radius: 3px;
 }
 
@@ -34,11 +43,23 @@
   margin-top: 50px;
 }
 
+.shared-header-bg {
+  margin-left: 80px;
+  background-color: #002841;
+  opacity: 0.8;
+  width: 200px;
+  height: 40px;
+  z-index: -1;
+  border-radius: 3px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 .shared-header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 80px;
 }
 
 
@@ -47,6 +68,12 @@
   font-weight: 900;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  color: white;
+  z-index: 3;
+  position: relative;
+}
+.personal-icon {
+  color: white;
 }
 
 .boards-list-container {
@@ -68,7 +95,7 @@
   width: 300px;
   height: 100px;
   border: 0;
-  background: pink;
+  background: #016283;
   display: flex;
 }
 
@@ -76,14 +103,21 @@
   outline: 0;
 }
 
+.boards-list-item-button:hover {
+  background: #1e91bb;
+  transition: all 0.3s ease-in-out;
+}
+
+
 
 .boards-name {
   font-weight: 900;
-  letter-spacing: -1px;
+  letter-spacing: -.5px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   display: flex;
   margin-top: -43px;
+
 }
 
 .boards-list-item-link {

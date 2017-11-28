@@ -34,6 +34,7 @@ class SessionDropdown extends React.Component {
 
   render () {
     return (
+
       <div ref={node => {this.node = node;}} >
         <button className="toolbar-sess-btn" onClick={ this.handleClick}>PIC</button>
           {this.state.visible && (

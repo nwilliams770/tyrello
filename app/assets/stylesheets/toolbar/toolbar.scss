@@ -1,9 +1,15 @@
-
+.toolbar-background {
+  display: flex;
+  min-width: 100%;
+  background: #002841;
+  height: 40px;
+  opacity: 0.8;
+}
 
 .toolbar-container {
   display: flex;
   min-width: 100%;
-  background: #002841;
+  background: none;
   height: 40px;
 }
 
@@ -28,7 +34,7 @@
 .logo {
   background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/c_scale,h_30/v1511475475/tyrello_logo_and_type_PNG_tdtcsc.png");
   background-repeat: no-repeat;
-  filter: opacity(70%);
+  filter: opacity(80%);
   height: 35px;
   width: 75px;
   display: flex;
@@ -36,7 +42,7 @@
 }
 
 .logo:hover {
-  filter: opacity(95%);
+  filter: opacity(100%);
 }
 
 .right-buttons-container {
@@ -99,8 +105,9 @@
   border-radius: 3px;
   background-color: #025080;
   text-decoration: none;
-  transition: all .25 ease-in-out;
 }
+
+
 
 .icon-links {
   text-decoration: none;
@@ -114,7 +121,8 @@
 }
 
 .right-buttons:hover {
-  background-color: red;
+  background-color: #003a5e;
+  transition: all .3s ease-in-out;
 }
 
 .toolbar-sess-btn {

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import BoardsIndex from './boards_index';
 import { fetchBoards } from '../../actions/board_actions';
 import { selectPersonalBoards, selectSharedBoards } from '../../reducers/selectors';
-import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
   personalBoards: selectPersonalBoards(state),
@@ -12,7 +11,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchBoards: () => dispatch(fetchBoards())
-
 });
 
 
