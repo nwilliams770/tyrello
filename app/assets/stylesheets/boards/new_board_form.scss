@@ -1,12 +1,55 @@
-.show {
-  height: 200px;
-  width: 200px;
+.board-form-container {
+  height: 250px;
+  width: 300px;
   background: pink;
-  display: absolute;
+  display: flex;
+  flex-direction: column;
   transition: 0.3s opacity ease-in-out;
+  margin-top: -100px;
+  margin-left: 20px;
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+}
+//
+// .hide {
+//   height: 0;
+//   overflow: hidden;
+// }
+
+.create-board {
+  margin-left: 20px;
+  margin-top: 25px;
 }
 
-.hide {
-  height: 0;
-  overflow: hidden;
+.create-board-button {
+  width: 300px;
+  height: 100px;
+  border: 0;
+  background: grey;
+  display: flex;
+  justify-content: center;
+}
+
+.create-board-button:focus {
+  outline: 0;
+}
+
+.create-board-copy {
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  display: flex;
+  color: lightgrey;
+  z-index: 0;
+}
+
+.board-form-underline {
+  display: flex;
+  height: 1px;
+  border: 0;
+  border-top: 3px solid #ccc;
+  margin: 0.5em 0;
+  margin-bottom: 26px;
 }

@@ -76,32 +76,6 @@
   outline: 0;
 }
 
-.create-board {
-  margin-left: 20px;
-  margin-top: 25px;
-}
-
-.create-board-button {
-  width: 300px;
-  height: 100px;
-  border: 0;
-  background: grey;
-  display: flex;
-  justify-content: center;
-}
-
-.create-board-button:focus {
-  outline: 0;
-}
-
-.create-board-copy {
-  font-weight: 400;
-  letter-spacing: 0px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  display: flex;
-  color: lightgrey;
-}
 
 .boards-name {
   font-weight: 900;

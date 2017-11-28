@@ -13,7 +13,6 @@ class NewBoardForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.toggleDropdown = this.toggleDropdown.bind(this);
     // this.renderErrors = this.renderErrors.bind(this);
 
     this.handleClick = this.handleClick.bind(this);
@@ -54,14 +53,6 @@ class NewBoardForm extends React.Component {
 
     this.handleClick();
   }
-  // toggleDropdown (e) {
-  //   e.preventDefault();
-  //   if (this.state.show) {
-  //     this.setState({ show: false});
-  //   } else {
-  //     this.setState({ show: true});
-  //   }
-  // }
 
   renderErrors() {
     return (
@@ -83,9 +74,13 @@ class NewBoardForm extends React.Component {
           </button>
         </li>
         {this.state.visible && (
-          <div className='show'>
+          <div className='board-form-container'>
             <form>
               <button onClick={ this.handleClick}>&#10005;</button>
+              <div className="board-form-header">
+                Create Board
+              </div>
+              <hr className="board-form-underline" />
               <label> Name:
                 <input onChange={ this.handleChange('name')}
                   placeholder="Name"

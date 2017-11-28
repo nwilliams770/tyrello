@@ -15,7 +15,6 @@ class ToolBar extends React.Component {
   render () {
     return (
         <div className="toolbar-container">
-          <SessionDropdown />
           <div className="boards-button-container">
             <div className="boards-dropdown">
               <button className="boards-button">
@@ -44,7 +43,7 @@ class ToolBar extends React.Component {
               <button className="right-buttons"><i className="right-buttons-icon fa fa-bell-o fa-2x" aria-hidden="true"></i></button>
             </a>
 
-            <button className="toolbar-sess-btn">PIC</button>
+            <SessionDropdown />
           </div>
         </div>
     );

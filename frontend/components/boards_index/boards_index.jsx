@@ -34,7 +34,7 @@ class BoardsIndex extends React.Component {
           <div className="boards-list-container">
             <ul className="boards-list">
                 { personalBoards }
-              <NewBoardFormContainer />
+                <NewBoardFormContainer />
             </ul>
           </div>
         </div>
