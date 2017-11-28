@@ -27,6 +27,10 @@ class NewBoardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const params = this.state.name;
+    if (params === "") {
+      
+      return;
+    }
     this.props.createBoard(params)
       .then(newBoard => {
         // this.props.history.push(`boards/${newBoard.id}`);

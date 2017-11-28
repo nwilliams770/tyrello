@@ -54,6 +54,8 @@
   font-weight: 200;
   letter-spacing: 0.75px;
   color: white;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .boards-item-link {
@@ -61,11 +63,13 @@
 }
 
 .boards-dropdown-item:hover {
-  width: 225px;
-  border-left: 16px solid #96c4d2;
+  width: 219px;
+  border-left: 22px solid #96c4d2;
   padding-left: 4px;
   background-color: #002841;
   transition: all 0.3s ease-in-out;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .boards-button:hover {

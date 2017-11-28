@@ -9,7 +9,6 @@ class SessionDropdown extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
-    this.logout2 = this.logout2.bind(this);
   }
 
   handleClick() {
@@ -32,9 +31,9 @@ class SessionDropdown extends React.Component {
     this.handleClick();
   }
 
-  logout2 () {
-    this.props.logout().then(() => this.props.history.push("/"));
-  }
+  // logout2 () {
+  //   this.props.logout().then(() => this.props.history.push("/"));
+  // }
 
 
   render () {
@@ -55,7 +54,7 @@ class SessionDropdown extends React.Component {
                   </div>
                   <hr className="session-dropdown-underline" />
                   <button className="logout-button"
-                    onClick={ this.logout2 }>Logout</button>
+                    onClick={ this.props.logout }>Logout</button>
               </div>
             </div>
           )}

@@ -6,6 +6,9 @@ class Api::ListsController < ApplicationController
 
     if @list.save
       render :json
+      @board = list.board
+      # you need an @board variable for the show page to render
+      render 'api/boards/show'
     else
       render :json, @board.errors.full_messages, status: 422
     end
