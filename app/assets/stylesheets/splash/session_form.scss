@@ -103,9 +103,9 @@ hr {
   display: flex;
   text-align: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   color: white;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .login-header {
@@ -126,10 +126,11 @@ hr {
 
 .login-bullets {
   font-size: 13px;
+  line-height: 1.4;
 }
 
 .bullet-header {
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 
 .login-input {

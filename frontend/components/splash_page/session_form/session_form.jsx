@@ -67,9 +67,10 @@ class SessionForm extends React.Component {
               <hr/>
               <ul className="login-body"><div className="bullet-header">Get more done with Tyrello:</div>
                 <div className="login-bullets">
-                <li>organize projects with lists and cards</li>
-                <li> flexible prioritization</li>
-                <li> work more collaboratively</li>
+                  <li>Flexible prioritization</li>
+                  <li>Organize projects with lists and cards</li>
+                  <li>Work more collaboratively</li>
+
                 </div>
               </ul>
             </div>

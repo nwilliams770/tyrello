@@ -16,7 +16,7 @@ end
 json.allIds do
   json.personal do
     json.array! @board_ids
-    end
+  end
 
   json.shared do
     json.array! @shared_board_ids

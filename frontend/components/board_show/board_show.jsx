@@ -6,9 +6,11 @@ class BoardShow extends React.Component {
 
   componentDidMount() {
     console.log(this.props);
-    document.title = "Yo Mama!";
-    let id = parseInt(this.props.match.params.id);
-    // this.props.fetchBoard(id);
+    console.log(window.getState());
+    //
+    // document.title = "Yo Mama!";
+  //   let id = parseInt(this.props.match.params.id);
+  //   this.props.fetchBoard(id);
   }
 
   render () {
@@ -20,7 +22,6 @@ class BoardShow extends React.Component {
         <ToolBar />
         <h1> thanks for coming, jellybean!</h1>
         <ul>
-
         </ul>
       </div>
     );

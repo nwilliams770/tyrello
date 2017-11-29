@@ -33,8 +33,8 @@ class NewBoardForm extends React.Component {
     }
     this.props.createBoard(params)
       .then(newBoard => {
-        // this.props.history.push(`boards/${newBoard.id}`);
         this.setState({name: ""});
+        this.handleClick();
       });
   }
 
@@ -94,7 +94,8 @@ class NewBoardForm extends React.Component {
                   placeholder="Name"
                   value = { this.state.name } />
               </label>
-              <button className="new-board-submit" onClick={ this.handleSubmit }>Create</button>
+              <button className="new-board-submit"
+                onClick={ this.handleSubmit }>Create</button>
             </form>
           </div>
         )}

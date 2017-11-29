@@ -8,7 +8,6 @@ class Api::ListsController < ApplicationController
     if @list.save
       @board = list.board
       @list_ids = []
-
       @board.lists.each do |list|
         @list_ids << list.id
       end

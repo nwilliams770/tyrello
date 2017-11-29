@@ -14,6 +14,19 @@ const defaultState = ({
   }
 });
 
+// ({
+//   boards: {
+//     byId: {},
+//     allIds: []
+//   },
+//   lists: {
+//     allIds: [],
+//     byId: {}
+//   }
+// });
+
+
+
 const boardsReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
@@ -21,8 +34,9 @@ const boardsReducer = (state = defaultState, action) => {
       return merge({}, state, action.boards);
     case RECEIVE_NEW_BOARD:
     case RECEIVE_BOARD:
-      let newBoard = {[action.board.id]: action.board};
-      return merge({}, state, newBoard);
+      let newBoard2 = {byId: {[action.board.id]: action.board}};
+      // let newBoard = {[action.board.id]: action.board};
+      return merge({}, state, newBoard2);
     default:
       return state;
   }

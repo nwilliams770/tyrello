@@ -18,24 +18,13 @@ class Api::BoardsController < ApplicationController
       #first find the user from the params
       #pull their boards
       #return them
-    @boards = current_user.boards
-    @shared_boards = current_user.shared_boards
-
-    @board_ids = []
-    @boards.each do |board|
-      @board_ids << board.id
-    end
-
-    @shared_board_ids = []
-    @shared_boards.each do |board|
-      @shared_board_ids << board.id
-    end
-
+    prep_views
     render :index
   end
 
   def show
     @board = Board.find(params[:id])
+    prep_views
     render :show
   end
 
@@ -71,6 +60,13 @@ class Api::BoardsController < ApplicationController
     @shared_board_ids = []
     @shared_boards.each do |board|
       @shared_board_ids << board.id
+
+      @list_ids = []
+      @boards.each do |board|
+        board.lists.each do |list|
+          @list_ids << list.id
+        end
+      end
     end
   end
 end

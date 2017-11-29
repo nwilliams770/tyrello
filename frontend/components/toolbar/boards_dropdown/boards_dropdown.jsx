@@ -58,7 +58,7 @@ class BoardsDropdown extends React.Component {
           </div>
         </button>
         {this.state.visible && (
-          <div className="boards-dropdown-container">
+          <div id="bg-test" className="boards-dropdown-container">
             <div className="boards-dropdown-main">
               <div className="personal-boards-dropdown">
                 <i className="dropdown-icon fa fa-user fa" aria-hidden="true"></i>
