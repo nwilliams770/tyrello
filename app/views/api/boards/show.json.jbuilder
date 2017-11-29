@@ -35,11 +35,13 @@ json.cards do
   json.byListId do
 
     @lists.each do |list|
-      json.set! list.id do
-        json.array!(list.cards) do |card|
-          json.id card.id
-        end
-      end
+      json.set! list.id, list.cards.pluck(:id)
+      # json.set! list.id do
+        # json.set! :list_id, list.cards.pluck(:id)
+        # json.array!(list.cards) do |card|
+        #   json.id card.id
+        # end
+      # end
     end
   end
 end

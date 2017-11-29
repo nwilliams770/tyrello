@@ -89,7 +89,6 @@ class Api::BoardsController < ApplicationController
     end
 
     @lists = @board.lists
-    
     @list_ids = []
     @boards.each do |board|
       board.lists.each do |list|

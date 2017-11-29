@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ToolBar from '../toolbar/toolbar';
+import ListIndexItem from './list_index_item';
 
 class BoardShow extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class BoardShow extends React.Component {
 
   render () {
     const lists = this.props.lists.map( (list) => (
-      <li key={list.id}> { list.title }</li>
+      <ListIndexItem key={list.id} list= {list} cards ={this.props.cards}/>
     ));
     console.log(lists);
     return (
