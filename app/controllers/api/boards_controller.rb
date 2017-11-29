@@ -4,7 +4,32 @@ class Api::BoardsController < ApplicationController
     @board.author_id = current_user.id
 
     if @board.save
-      prep_views
+      @boards = current_user.boards
+      @shared_boards = current_user.shared_boards
+
+      @board_ids = []
+      @boards.each do |board|
+        @board_ids << board.id
+      end
+
+      @shared_board_ids = []
+      @shared_boards.each do |board|
+        @shared_board_ids << board.id
+      end
+
+      @list_ids = []
+      @boards.each do |board|
+        board.lists.each do |list|
+          @list_ids << list.id
+        end
+      end
+
+      @cards = []
+      @board.lists.each do |list|
+        list.cards.each do |card|
+          @cards << card
+        end
+      end
       render :index
     else
       render :json, @board.errors.full_messages, status: 422
@@ -18,13 +43,66 @@ class Api::BoardsController < ApplicationController
       #first find the user from the params
       #pull their boards
       #return them
-    prep_views
+    # prep_views
+    @boards = current_user.boards
+    @shared_boards = current_user.shared_boards
+
+    @board_ids = []
+    @boards.each do |board|
+      @board_ids << board.id
+    end
+
+    @shared_board_ids = []
+    @shared_boards.each do |board|
+      @shared_board_ids << board.id
+    end
+
+    @list_ids = []
+    @boards.each do |board|
+      board.lists.each do |list|
+        @list_ids << list.id
+      end
+    end
+
+    # @cards = []
+    # @board.lists.each do |list|
+    #   list.cards.each do |card|
+    #     @cards << card
+    #   end
+    # end
     render :index
   end
 
   def show
     @board = Board.find(params[:id])
-    prep_views
+    @boards = current_user.boards
+    @shared_boards = current_user.shared_boards
+
+    @board_ids = []
+    @boards.each do |board|
+      @board_ids << board.id
+    end
+
+    @shared_board_ids = []
+    @shared_boards.each do |board|
+      @shared_board_ids << board.id
+    end
+
+    @lists = @board.lists
+    
+    @list_ids = []
+    @boards.each do |board|
+      board.lists.each do |list|
+        @list_ids << list.id
+      end
+    end
+
+    @cards = []
+      @board.lists.each do |list|
+        list.cards.each do |card|
+          @cards << card
+        end
+      end
     render :show
   end
 
@@ -48,25 +126,32 @@ class Api::BoardsController < ApplicationController
     params.require(:board).permit(:name)
   end
 
-  def prep_views
-    @boards = current_user.boards
-    @shared_boards = current_user.shared_boards
-
-    @board_ids = []
-    @boards.each do |board|
-      @board_ids << board.id
-    end
-
-    @shared_board_ids = []
-    @shared_boards.each do |board|
-      @shared_board_ids << board.id
-
-      @list_ids = []
-      @boards.each do |board|
-        board.lists.each do |list|
-          @list_ids << list.id
-        end
-      end
-    end
-  end
+  # def prep_views
+  #   @boards = current_user.boards
+  #   @shared_boards = current_user.shared_boards
+  #
+  #   @board_ids = []
+  #   @boards.each do |board|
+  #     @board_ids << board.id
+  #   end
+  #
+  #   @shared_board_ids = []
+  #   @shared_boards.each do |board|
+  #     @shared_board_ids << board.id
+  #   end
+  #
+  #   @list_ids = []
+  #   @boards.each do |board|
+  #     board.lists.each do |list|
+  #       @list_ids << list.id
+  #     end
+  #   end
+  #
+  #   @cards = []
+  #   @board.lists.each do |list|
+  #     list.cards.each do |card|
+  #       @cards << card
+  #     end
+  #   end
+  # end
 end

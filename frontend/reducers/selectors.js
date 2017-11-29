@@ -1,7 +1,6 @@
-import values from 'lodash/values';
+import { values, keys } from 'lodash';
 
 export const selectPersonalBoards = (state) => {
-
   let personalIds = values(state.entities.boards.allIds.personal);
   return personalIds.map(id => (state.entities.boards.byId[id]));
 };
@@ -11,8 +10,16 @@ export const selectSharedBoards = (state) => {
   return sharedIds.map(id => (state.entities.boards.byId[id]));
 };
 
+
 export const selectLists = (state) => {
-  console.log(state);
-  // let listIds = values(state.entities.board.lists.allIds);
-  // return listIds.map(id => (state.entities.lists.byId[id]));
+  let listIds = values(state.entities.lists.allIds);
+  let lists = listIds.map(id => (state.entities.lists.byId[id]));
+  return lists;
+};
+
+export const selectCards = (state) => {
+  let listIds = values(state.entities.lists.allIds);
+  let cards = listIds.map(id => values(state.entities.cards.byListId[id]));
+  console.log("FROM CARD SELECTOR");
+  console.log(cards);
 };

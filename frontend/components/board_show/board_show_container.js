@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 
 import BoardShow from './board_show';
 import { fetchBoard } from '../../actions/board_actions';
-import { selectLists } from '../../reducers/selectors';
+import { selectLists, selectCards } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
-  lists : selectLists(state)
+  lists : selectLists(state),
+  cards: selectCards(state)
 });
 
 const mapDispatchToProps = dispatch => ({
