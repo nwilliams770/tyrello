@@ -28,7 +28,7 @@ class NewBoardForm extends React.Component {
     e.preventDefault();
     const params = this.state.name;
     if (params === "") {
-      
+
       return;
     }
     this.props.createBoard(params)
@@ -56,6 +56,7 @@ class NewBoardForm extends React.Component {
     }
 
     this.handleClick();
+    this.setState({name: ""});
   }
 
   renderErrors() {

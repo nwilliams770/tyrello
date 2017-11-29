@@ -7,7 +7,11 @@ class Api::ListsController < ApplicationController
 
     if @list.save
       @board = list.board
-      @list_ids = @board.lists.map {|list| list.id}
+      @list_ids = []
+
+      @board.lists.each do |list|
+        @list_ids << list.id
+      end
       # you need an @board variable for the show page to render
       render 'api/boards/show'
     else
