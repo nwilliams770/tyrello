@@ -9,9 +9,8 @@ class CardItem extends React.Component {
   render() {
     const card = this.props.card;
     return (
-      <div>
-        <h1> {card.title}</h1>
-          
+      <div className="card-item">
+        {card.title}
       </div>
     );
   }

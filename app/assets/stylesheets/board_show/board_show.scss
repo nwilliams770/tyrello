@@ -1,0 +1,51 @@
+.board-bar {
+  width: 100%;
+  height: 50px;
+  background: red;
+}
+
+.lists-list {
+  flex-direction: row;
+  display: flex;
+  overflow: scroll;
+  height: Calc(100vh - 90px);
+}
+
+.list-header {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.list-header-container {
+  width: 270px;
+}
+
+.list-item-main {
+  margin-left: 20px ;
+  margin-top: 25px;
+  overflow: scroll;
+  width: 270px;
+  background-color: #016283;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.card-item {
+  margin-top: 10px;
+  width: 250px;
+  min-height: 35px;
+  background-color: #96c4d2;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+  padding-left: 8px;
+  font-size: 15px;
+}
