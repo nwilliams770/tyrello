@@ -2,7 +2,7 @@ export const createList = (list) => (
   $.ajax({
     method: 'POST',
     url: 'api/lists',
-    data: {list: {title: list}}
+    data: { list }
   })
 );
 

@@ -12,9 +12,9 @@ board2 = Board.create(name: "white walkers 101", author_id: user1.id)
 
 list1 = List.create(title: "dragonglass caches", board_id: board2.id)
 list3 = List.create(title: "undead dragon recipes", board_id: board2.id)
-list4 = List.create(title: "where the lady whitewalkers at?", board_id: board2.id)
-list5 = List.create(title: "the Night King", board_id: board2.id)
-list6 = List.create(title: "wights and how to make them work FOR YOU", board_id: board2.id)
+# list4 = List.create(title: "where the lady whitewalkers at?", board_id: board2.id)
+# list5 = List.create(title: "the Night King", board_id: board2.id)
+# list6 = List.create(title: "wights and how to make them work FOR YOU", board_id: board2.id)
 
 
 list2 = List.create(title: "those who have been dealt with", board_id: board1.id)

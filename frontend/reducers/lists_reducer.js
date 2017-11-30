@@ -26,9 +26,9 @@ const listsReducer = (state = defaultState, action) => {
     case RECEIVE_BOARD:
       let newBoard = action.board.lists;
       if (newBoard === undefined) {
-        newBoard = null;
+        newBoard = defaultState;
       }
-      return newBoard;
+      return merge({}, state, newBoard);
     default:
       return state;
   }

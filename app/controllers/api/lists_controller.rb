@@ -2,19 +2,19 @@ class Api::ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    @list.board_id = @list.board.id
-
 
     if @list.save
-      @board = list.board
+      @board = @list.board
       @list_ids = []
       @board.lists.each do |list|
         @list_ids << list.id
+      @cards = []
+      @lists= []
       end
       # you need an @board variable for the show page to render
       render 'api/boards/show'
     else
-      render :json, @board.errors.full_messages, status: 422
+      render :json, @list.errors.full_messages, status: 422
     end
   end
 
@@ -36,6 +36,6 @@ class Api::ListsController < ApplicationController
 
   private
   def list_params
-    params.require(:list).permit(:title)
+    params.require(:list).permit(:title, :board_id)
   end
 end
