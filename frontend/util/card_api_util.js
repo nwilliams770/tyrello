@@ -2,7 +2,7 @@ export const createCard = (card) => (
   $.ajax({
     method: 'POST',
     url: 'api/cards',
-    data: {card: {title: card}}
+    data: { card }
   })
 );
 

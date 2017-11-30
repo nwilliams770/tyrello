@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 import CardItem from './card_item';
+import NewCardFormContainer from './new_card_form/new_card_container';
 
 class ListItem extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class ListItem extends React.Component {
           <div className="cards">
             {cards}
           </div>
+          <NewCardFormContainer listId = {this.props.list.id} />
         </div>
       </div>
 
