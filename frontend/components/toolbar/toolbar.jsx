@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SessionDropdown from './session_dropdown/session_dropdown_container';
-import BoardsDropdown from './boards_dropdown/boards_dropdown';
+import BoardsDropdownContainer from './boards_dropdown/boards_dropdown_container';
 
 
 class ToolBar extends React.Component {
@@ -9,16 +9,15 @@ class ToolBar extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  // personalBoards= { this.props.personalBoards }
+  // sharedBoards= {this.props.sharedBoards }
   render () {
     return (
       <div className="toolbar-background">
         <div className="toolbar-container">
           <div className="boards-button-container">
             <div className="boards-dropdown">
-              <BoardsDropdown
-                personalBoards= { this.props.personalBoards }
-                sharedBoards= {this.props.sharedBoards }/>
+              <BoardsDropdownContainer />
             </div>
           </div>
           <Link className="logo-container" to="/boards">

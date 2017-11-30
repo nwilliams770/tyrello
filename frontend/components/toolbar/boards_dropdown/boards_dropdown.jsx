@@ -15,7 +15,8 @@ class BoardsDropdown extends React.Component {
 
   componentDidMount() {
     console.log(this.props);
-    // this.props.fetchBoards();
+    this.props.fetchBoards();
+
   }
 
   handleClick() {
@@ -38,6 +39,30 @@ class BoardsDropdown extends React.Component {
     this.handleClick();
   }
   render() {
+    if (!this.props.personalBoards) {
+      return <div></div>;
+    }
+    const passedPersonalBoards = this.props.personalBoards.map( (board) => {
+      let link = `/boards/${board.id}`;
+      return (
+      <Link to={ link } className="boards-item-link" >
+        <li className="boards-dropdown-item"
+          key={ board.id }
+          board={board}> {board.name} </li>
+      </Link>
+      );
+    });
+
+    const passedSharedBoards = this.props.sharedBoards.map( (board) => {
+      let link = `/boards/${board.id}`;
+      return (
+      <Link to={ link } className="boards-item-link" >
+        <li className="boards-dropdown-item"
+          key={ board.id }
+          board={board}> {board.name} </li>
+      </Link>
+      );
+    });
     // const personalBoards = this.props.personalBoards.map( (board) => (
     //   <li key={ board.id }> {board.name} </li>
     // ));
@@ -45,8 +70,8 @@ class BoardsDropdown extends React.Component {
     // const sharedBoards = this.props.sharedBoards.map( (board) => (
     //   <li key={ board.id }> {board.name} </li>
     // ));
-    const personalBoards = this.props.personalBoards;
-    const sharedBoards = this.props.sharedBoards;
+    // const personalBoards = this.props.personalBoards;
+    // const sharedBoards = this.props.sharedBoards;
 
     return (
       <div ref={node => {this.node = node;}} >
@@ -65,7 +90,7 @@ class BoardsDropdown extends React.Component {
                 <h1 className="boards-dropdown-header">Personal Boards</h1>
               </div>
               <ul className="boards-dropdown-list">
-                { personalBoards }
+                { passedPersonalBoards }
               </ul>
 
               <div className="shared-boards-dropdown">
@@ -73,7 +98,7 @@ class BoardsDropdown extends React.Component {
                 <h1 className="boards-dropdown-header">Shared Boards</h1>
               </div>
               <ul className="boards-dropdown-list">
-                { sharedBoards }
+                { passedSharedBoards }
               </ul>
             </div>
           </div>

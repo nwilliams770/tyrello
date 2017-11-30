@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
-
+import {withRouter} from 'react-router-dom';
 import BoardShow from './board_show';
 import { fetchBoard } from '../../actions/board_actions';
 import { selectLists, selectCards } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
+  boards: state.entities.boards,
   lists : selectLists(state),
-  cards: selectCards(state)
+  cards: state.entities.cards
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -14,7 +15,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(BoardShow);
+)(BoardShow));

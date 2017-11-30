@@ -23,34 +23,34 @@ class BoardsIndex extends React.Component {
       <BoardsIndexItem key={ board.id } board={board} />
     ));
 
-    const passedPersonalBoards = this.props.personalBoards.map( (board) => {
-      let link = `boards/${board.id}`;
-      return (
-      <Link to={ link } className="boards-item-link" >
-        <li className="boards-dropdown-item"
-          key={ board.id }
-          board={board}> {board.name} </li>
-      </Link>
-      );
-    });
-
-    const passedSharedBoards = this.props.sharedBoards.map( (board) => {
-      let link = `boards/${board.id}`;
-      return (
-      <Link to={ link } className="boards-item-link" >
-        <li className="boards-dropdown-item"
-          key={ board.id }
-          board={board}> {board.name} </li>
-      </Link>
-      );
-    });
+    // const passedPersonalBoards = this.props.personalBoards.map( (board) => {
+    //   let link = `boards/${board.id}`;
+    //   return (
+    //   <Link to={ link } className="boards-item-link" >
+    //     <li className="boards-dropdown-item"
+    //       key={ board.id }
+    //       board={board}> {board.name} </li>
+    //   </Link>
+    //   );
+    // });
+    //
+    // const passedSharedBoards = this.props.sharedBoards.map( (board) => {
+    //   let link = `boards/${board.id}`;
+    //   return (
+    //   <Link to={ link } className="boards-item-link" >
+    //     <li className="boards-dropdown-item"
+    //       key={ board.id }
+    //       board={board}> {board.name} </li>
+    //   </Link>
+    //   );
+    // // });
+    // personalBoards= { passedPersonalBoards }
+    // sharedBoards = { passedSharedBoards }
 
 
     return (
       <div className="bg-box2">
         <ToolBarContainer
-          personalBoards= { passedPersonalBoards }
-          sharedBoards = { passedSharedBoards }
           className="entire-toolbar"/>
           <div className="personal-header-bg">
             <div className="personal-header-container">

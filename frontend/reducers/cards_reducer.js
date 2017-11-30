@@ -13,7 +13,10 @@ const cardsReducer = (state = defaultState, action) => {
   switch(action.type) {
     case RECEIVE_BOARD:
       let newBoard = action.board.cards;
-      return merge({}, state, newBoard);
+      if (newBoard === undefined) {
+        newBoard = null;
+      }
+      return newBoard;
     default:
       return state;
   }

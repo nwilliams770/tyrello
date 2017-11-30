@@ -1,28 +1,43 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ToolBar from '../toolbar/toolbar';
-import ListIndexItem from './list_index_item';
+import ListItem from './list_item';
 
 class BoardShow extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      done: false
+    };
   }
-  componentDidMount() {
+
+  componentWillReceiveProps (newProps) {
+    if (this.props.match.params.id !== newProps.match.params.id ) {
+      let id = parseInt(newProps.match.params.id);
+      this.props.fetchBoard(id).then( () => (this.setState({ done: true })));
+    }
+  }
+  componentWillMount() {
     document.title = "Tomber dans le feu";
     let id = parseInt(this.props.match.params.id);
-    this.props.fetchBoard(id);
-
+    this.props.fetchBoard(id).then( () => (this.setState({ done: true })));
   }
 
   render () {
-    const lists = this.props.lists.map( (list) => (
-      <ListIndexItem key={list.id} list= {list} cards ={this.props.cards}/>
-    ));
-    console.log(lists);
+
+    if (this.state.done === false) {
+      return <div></div>;
+    }
+    const lists = this.props.lists.map( (list) => {
+
+      const cards = this.props.cards.byListId[list.id].map(cardId => (this.props.cards.byId[cardId]));
+      return <ListItem key={list.id} list= {list} cards ={ cards }/>;
+    });
+
     return (
       <div>
         <ToolBar />
-        <h1> thanks for coming, jellybean!</h1>
         <ul>
           {lists}
         </ul>

@@ -90,10 +90,8 @@ class Api::BoardsController < ApplicationController
 
     @lists = @board.lists
     @list_ids = []
-    @boards.each do |board|
-      board.lists.each do |list|
-        @list_ids << list.id
-      end
+    @board.lists.each do |list|
+      @list_ids << list.id
     end
 
     @cards = []

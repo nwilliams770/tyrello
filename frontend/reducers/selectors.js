@@ -12,14 +12,7 @@ export const selectSharedBoards = (state) => {
 
 
 export const selectLists = (state) => {
-  let listIds = values(state.entities.lists.allIds);
+  let listIds = state.entities.lists.allIds;
   let lists = listIds.map(id => (state.entities.lists.byId[id]));
   return lists;
-};
-
-export const selectCards = (state) => {
-  let listIds = values(state.entities.lists.allIds);
-  let cards = listIds.map(id => values(state.entities.cards.byListId[id]));
-  console.log("FROM CARD SELECTOR");
-  console.log(cards);
 };

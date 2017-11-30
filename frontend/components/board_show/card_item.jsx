@@ -1,20 +1,20 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class ListIndexItem extends React.Component {
+class CardItem extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const list = this.props.list;
+    const card = this.props.card;
     return (
       <div>
-        <h1> { list.title }</h1>
-
+        <h1> {card.title}</h1>
+          
       </div>
     );
   }
 }
 
-export default ListIndexItem;
+export default CardItem;

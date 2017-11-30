@@ -5,7 +5,7 @@ import { RECEIVE_BOARD } from '../actions/board_actions';
 const defaultState = ({
   allIds: [],
   byId: {}
-  } 
+  }
 );
 
 // ({
@@ -25,7 +25,10 @@ const listsReducer = (state = defaultState, action) => {
   switch(action.type) {
     case RECEIVE_BOARD:
       let newBoard = action.board.lists;
-      return merge({}, state, newBoard);
+      if (newBoard === undefined) {
+        newBoard = null;
+      }
+      return newBoard;
     default:
       return state;
   }
