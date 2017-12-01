@@ -13,7 +13,7 @@ class ListItem extends React.Component {
     const list = this.props.list;
     // const boardName = this.props.boardName;
     const cards = this.props.cards.map(card => (
-      <CardItem id={card.id} card={card} />
+      <CardItem key={card.id} card={card} />
     ));
     return (
       <div>
