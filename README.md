@@ -2,6 +2,8 @@
 
 [Tyrello Live](http://www.tyrello.co/#/)
 
+Tyrello is a Trello-inspired note-taking application built on ReactJS + Rails and follows a Redux/Flux pattern.
+
 Features & Implementation
 ------
 ### Boards
