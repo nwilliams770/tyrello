@@ -37,7 +37,11 @@ class BoardShow extends React.Component {
       if (this.props.cards.byListId[list.id]) {
 
         const cards = this.props.cards.byListId[list.id].map(cardId => (this.props.cards.byId[cardId]));
-        return <ListItem key={list.id} list= {list} cards ={ cards } />;
+        return <ListItem key={list.id}
+                        list= {list}
+                        cards ={ cards }
+                        id = { id }
+                        fetchBoard = { this.props.fetchBoard }/>;
       }
     });
 
@@ -48,7 +52,7 @@ class BoardShow extends React.Component {
         </div>
         <ul className="lists-list">
           {lists}
-          <NewListFormContainer id = { id }/>
+          <NewListFormContainer id = { id } fetchBoard = { this.props.fetchBoard }/>
         </ul>
       </div>
     );
