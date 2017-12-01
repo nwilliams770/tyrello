@@ -1,24 +1,25 @@
-# README
+# Tyrello
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Tyrello Live](http://www.tyrello.co/#/)
 
-Things you may want to cover:
+Features & Implementation
+------
+### Boards
+Users can organize projects via boards. Upon creation, boards will default to a personal board. Board page navigation is always accessible to the user from the menu bar on the left.
 
-* Ruby version
+![board demo](http://res.cloudinary.com/nwilliams770/image/upload/q_30/v1512156465/Screen_Shot_2017-12-01_at_10.51.48_AM_tslckk.jpg)
 
-* System dependencies
+### Lists & Cards
+Board components contain list components which contain card components. Lists stack horizontally, allowing users to intuitively scroll through lists while modularizing their projects.
 
-* Configuration
+![board demo](http://res.cloudinary.com/nwilliams770/image/upload/q_30/v1512156465/Screen_Shot_2017-12-01_at_10.51.48_AM_tslckk.jpg)
 
-* Database creation
+Future Directions 
+------
+With the knowledge gained from building this project, I plan to refactor and implement additional features.
 
-* Database initialization
+### Drag & Drop
+One of the core features of Trello is the ability to drag cards to different lists, providing the user with quick flexibility. I plan to implement this feature using the ReactDnD library.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Board Sharing
+Board sharing was considered and implemented on the backend but I'd like to implement board sharing components. This will encourage collaboration while working on projects and allow users to create 'microteams' via board sharing.
