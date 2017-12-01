@@ -12,7 +12,7 @@ Users can organize projects via boards. Upon creation, boards will default to a 
 ### Lists & Cards
 Board components contain list components which contain card components. Lists stack horizontally, allowing users to intuitively scroll through lists while modularizing their projects.
 
-![board demo](http://res.cloudinary.com/nwilliams770/image/upload/q_30/v1512156465/Screen_Shot_2017-12-01_at_10.51.48_AM_tslckk.jpg)
+![board demo](http://res.cloudinary.com/nwilliams770/image/upload/q_30/v1512156480/Screen_Shot_2017-12-01_at_10.52.28_AM_sjidpt.jpg)
 
 Future Directions 
 ------
