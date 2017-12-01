@@ -53,8 +53,26 @@ class SessionForm extends React.Component {
 
   demoLogin(e) {
     e.preventDefault();
-    this.props.login({username: 'sansa', password: 'password'});
+    this.props.login({username: 'Sansa-Stark', password: 'password'});
   }
+
+  // typeWriter(e) {
+  //   e.preventDefault();
+  //   const username = document.getElementById("username");
+  //   const password = document.getElementById("password");
+  //
+  //   const user_text = "Sansa-Stark";
+  //   const pass_test = "password";
+  //
+  //   let i = 0;
+  //   let speed = 40;
+  //
+  //   if (i < user_text.length) {
+  //     username.innerHTML += text.charAt(i);
+  //     i ++;
+  //     setTimeout(typeWriter, speed)
+  //   }
+  // }
 
   render () {
     return (
@@ -81,6 +99,7 @@ class SessionForm extends React.Component {
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-input login-username"
+                  id = "username"
                   placeholder="Username"
                 />
               <label className="input-label"></label>
@@ -88,6 +107,7 @@ class SessionForm extends React.Component {
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input login-password"
+                  id = "password"
                   placeholder="Password"
                 />
             </div>
