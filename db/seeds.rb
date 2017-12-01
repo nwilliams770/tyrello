@@ -21,7 +21,7 @@ card6 = Card.create(title: "Dragon Fire!", list_id: list1.id)
 
 card3 = Card.create(title: "Dead Dragon Bone", list_id: list3.id)
 card4 = Card.create(title: "Fermented Dragon Paté", list_id: list3.id)
-card5 = Card.create(title: "Dragoneye Schmear", list_id: list3.id)
+card5 = Card.create(title: "Dragon Eye Schmear", list_id: list3.id)
 
 list2 = List.create(title: "Those Who Have Been Dealt With", board_id: board1.id)
 list4 = List.create(title: "Those Needing A Smackdown", board_id: board1.id)
