@@ -26,7 +26,8 @@ class ListItem extends React.Component {
           <div className="cards">
             {cards}
           </div>
-          <NewCardFormContainer listId = {this.props.list.id} />
+          <NewCardFormContainer  listId = {this.props.list.id} id = { this.props.id }
+          fetchBoard = { this.props.fetchBoard }/>
         </div>
       </div>
 
