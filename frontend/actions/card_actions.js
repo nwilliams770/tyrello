@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/list_api_util';
+import * as APIUtil from '../util/card_api_util';
 
 import { receiveBoard } from './board_actions';
 

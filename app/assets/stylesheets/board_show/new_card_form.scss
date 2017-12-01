@@ -1,0 +1,44 @@
+.create-card-button {
+  width: 270px;
+  height: 35px;
+  margin-top: 5px;
+  margin-left: 0;
+  background-color: rgba(138, 171, 181, 0.1);
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+  opacity: 0.8;
+  border: none;
+}
+
+.card-form-parent {
+  max-height: 85px;
+}
+
+.create-card-button:hover {
+  background-color: rgba(150, 196, 210, 0.8);
+}
+
+.create-card-button:focus {
+  border: 0;
+  outline: 0;
+}
+
+.card-form-cushion {
+  margin-top: 5px;
+  width: 270px;
+  height: 40px;
+  background: #016283;
+  border-radius: 4px;
+}
+
+.card-form-container {
+  width: 270px;
+  height: 80px;
+  background: #1e91bb;
+  border-radius: 4px;
+  position: relative;
+  bottom: 35px;
+}

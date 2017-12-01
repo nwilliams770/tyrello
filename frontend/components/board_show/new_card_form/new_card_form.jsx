@@ -8,7 +8,6 @@ class NewCardForm extends React.Component {
     this.state = {
       // list_id: parseInt(this.props.match.params.id),
       title: "",
-      list_id: this.props.listId,
       visible: false
     };
     this.handleChange = this.handleChange.bind(this);
@@ -24,7 +23,7 @@ class NewCardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const params = {title: this.state.title, board_id: this.state.list_id};
+    const params = {title: this.state.title, list_id: this.props.listId};
     if (params.title === "") {
       return;
     }
@@ -56,15 +55,14 @@ class NewCardForm extends React.Component {
 
   render() {
     return(
-      <div className="list-form-parent" ref={node => {this.node = node;}} >
-        <button onClick={ this.handleClick} className="create-list-button">
+      <div className="card-form-parent" ref={node => {this.node = node;}} >
+        <button onClick={ this.handleClick} className="create-card-button">
           <div className="create-list-copy">
             Add a card...
           </div>
         </button>
         {this.state.visible && (
-          <div>
-            <div className='list-form-container'>
+            <div className='card-form-container'>
             <form>
               <label>
                 <div className="new-list-input-container">
@@ -79,7 +77,6 @@ class NewCardForm extends React.Component {
             </form>
             <button className="list-form-exit-button" onClick={ this.handleClick}>&#10005;</button>
             </div>
-          </div>
         )}
       </div>
     );

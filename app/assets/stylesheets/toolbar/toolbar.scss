@@ -124,6 +124,10 @@
   transition: all .3s ease-in-out;
 }
 
+.right-buttons:focus {
+  outline: none;
+}
+
 .toolbar-sess-btn {
   overflow: hidden;
   display: flex;

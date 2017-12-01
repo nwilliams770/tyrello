@@ -72,6 +72,10 @@
   padding-bottom: 3px;
 }
 
+.boards-button {
+  text-decoration: none;
+}
+
 .boards-button:hover {
   background-color: #003a5e;
   transition: all .3s ease-in-out;
@@ -79,4 +83,5 @@
 
 .boards-button:focus {
   outline: 0;
+  text-decoration: none;
 }

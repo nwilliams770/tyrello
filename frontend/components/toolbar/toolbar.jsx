@@ -17,13 +17,19 @@ class ToolBar extends React.Component {
         <div className="toolbar-container">
           <div className="boards-button-container">
             <div className="boards-dropdown">
-              <BoardsDropdownContainer />
+              <Link to="/boards">
+                <button className="boards-button" onClick= {this.handleClick}>
+                  <img src="http://res.cloudinary.com/nwilliams770/image/upload/c_scale,h_18/v1511726611/logo_gku6sb.png"
+                    className="boards-btn-logo" />
+                  <div className="boards-button-copy">
+                    Boards
+                  </div>
+                </button>
+              </Link>
             </div>
           </div>
           <Link className="logo-container" to="/boards">
-
               <div className="logo">
-
             </div>
           </Link>
           <div className="right-buttons-container">
@@ -46,3 +52,5 @@ class ToolBar extends React.Component {
 }
 
 export default ToolBar;
+
+// <BoardsDropdownContainer />

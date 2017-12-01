@@ -1,7 +1,14 @@
-.board-bar {
+.board-show-bg {
+  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/v1511852310/index_background_lar2sa.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 50px;
-  background: red;
+  position: absolute;
+  bottom:0;
+  margin: auto;
+  z-index: -3;
 }
 
 .lists-list {

@@ -22,9 +22,12 @@ json.lists do
   end
 end
 
-if @list
+# if @list
+#   json.cards({byId: {@list.id => []}, byListId: {@list.id => []}})
+if @list && @cards === []
   json.cards({byId: {@list.id => []}, byListId: {@list.id => []}})
-
+elsif @card
+  json.cards({byId: {@card.id => {id: @card.id, title: @card.title}}, byListId: {@list.id => {id: @card.id, title: @card.title}}})
 else
   json.cards do
     json.byId do

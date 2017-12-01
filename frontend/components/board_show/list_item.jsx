@@ -11,7 +11,7 @@ class ListItem extends React.Component {
 
   render() {
     const list = this.props.list;
-    const boardName = this.props.boardName;
+    // const boardName = this.props.boardName;
     const cards = this.props.cards.map(card => (
       <CardItem id={card.id} card={card} />
     ));

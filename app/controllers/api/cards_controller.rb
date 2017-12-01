@@ -1,18 +1,17 @@
 class Api::CardsController < ApplicationController
   def create
     @card = Card.new(card_params)
-    @card.list_id = @card.list.id
-
     if @card.save!
-      @board = card.list.board
-      @list = card.list
-
+      @board = @card.list.board
+      @list = @card.list
+      @lists = @board.lists
       @list_ids = []
       @board.lists.each do |list|
         @list_ids << list.id
-      end
-
       @cards = @card.list.cards
+
+      end
+    render 'api/boards/show'
     end
   end
 

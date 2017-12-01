@@ -16,6 +16,7 @@ const cardsReducer = (state = defaultState, action) => {
       if (newBoard === undefined) {
         newBoard = defaultState;
       }
+      
       return merge({}, state, newBoard);
     default:
       return state;

@@ -25,26 +25,26 @@ class BoardShow extends React.Component {
   }
 
   render () {
+    // return (<ToolBar />);
 
     if (!this.props.lists[0] || !this.props.cards.byListId) {
       return null;
     }
     const id = parseInt(this.props.match.params.id);
-    const boardName = this.props.boards[id].name;
-    document.title = `Tyrello - ${boardName}`;
+
+
     const lists = this.props.lists.map( (list) => {
       if (this.props.cards.byListId[list.id]) {
 
         const cards = this.props.cards.byListId[list.id].map(cardId => (this.props.cards.byId[cardId]));
-        return <ListItem key={list.id} list= {list} cards ={ cards } boardName = {boardName} />;
+        return <ListItem key={list.id} list= {list} cards ={ cards } />;
       }
     });
 
     return (
-      <div>
+      <div className="board-show-bg">
         <ToolBar />
         <div className="board-bar">
-          { boardName }
         </div>
         <ul className="lists-list">
           {lists}
@@ -54,5 +54,6 @@ class BoardShow extends React.Component {
     );
   }
 }
-
+// const boardName = this.props.boards[id].name;
+// document.title = `Tyrello - ${boardName}`;
 export default BoardShow;
